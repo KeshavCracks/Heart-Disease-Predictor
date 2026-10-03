@@ -36,11 +36,12 @@ The one-standard-error rule selected **Logistic Regression on the 11-field set**
 heart-disease-demo/
 ├── app.py                     Guided Streamlit UI (no prediction storage)
 ├── .streamlit/config.toml     server privacy and runtime settings
-├── assets/vercel-brand.css    byte-identical VBG design foundation
+├── assets/                    reference CSS, trailer video and poster
 ├── design-system/             independent VBG-inspired page guidance
 ├── train.py                   grouped-CV search and held-out evaluation
 ├── requirements.txt
 ├── requirements-dev.txt
+├── requirements-video.txt     optional trailer rendering dependencies
 ├── pytest.ini                 project-root imports for pytest
 ├── PLAN.md                    approved scope and decisions
 ├── DEPLOYMENT.md              shareable demo deployment notes
@@ -48,6 +49,7 @@ heart-disease-demo/
 ├── data/
 │   └── heart_disease_uci.csv  combined official UCI data (920 × 16)
 ├── scripts/
+│   ├── create_trailer.py      render the original motion-graphics trailer
 │   └── download_data.py       download/merge the four UCI cohorts
 ├── src/
 │   ├── config.py              project paths, feature sets and labels
@@ -117,3 +119,11 @@ See [DEPLOYMENT.md](DEPLOYMENT.md) and the [model card](MODEL_CARD.md). The app 
 Janosi, A., Steinbrunn, W., Pfisterer, W. & Detrano, R. (1988). **Heart Disease**. UCI Machine Learning Repository. <https://archive.ics.uci.edu/dataset/45/heart+disease>
 
 The UCI archive supplies processed Cleveland, Hungarian, Switzerland and VA Long Beach cohort files. The downloader preserves cohort labels for validation only.
+
+## Project trailer
+
+[![Watch the 31-second Heart Disease Predictor trailer](assets/heart-disease-predictor-trailer-poster.jpg)](assets/heart-disease-predictor-trailer.mp4)
+
+[Open or download the 1080p trailer (MP4)](assets/heart-disease-predictor-trailer.mp4) · Original synthesized soundtrack. The trailer is an educational overview—not a clinical claim.
+
+To re-render it, install the optional video dependencies with `python -m pip install -r requirements-video.txt`, then run `python scripts/create_trailer.py`.
