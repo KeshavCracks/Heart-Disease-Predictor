@@ -1,0 +1,14 @@
+,missing_count,missing_percent,observed_count
+ca,611,66.4,309
+thal,486,52.8,434
+slope,309,33.6,611
+chol,202,22.0,718
+fbs,90,9.8,830
+oldpeak,62,6.7,858
+trestbps,60,6.5,860
+exang,55,6.0,865
+thalch,55,6.0,865
+restecg,2,0.2,918
+sex,0,0.0,920
+age,0,0.0,920
+cp,0,0.0,920

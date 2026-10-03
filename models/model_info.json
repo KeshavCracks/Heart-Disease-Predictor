@@ -1,0 +1,81 @@
+{
+  "trained_at_utc": "2026-10-03T03:06:16+00:00",
+  "best_configuration": "core11__logistic_regression",
+  "best_model": "logistic_regression",
+  "best_model_label": "Logistic Regression",
+  "feature_set": "core11",
+  "feature_set_label": "Core 11 fields (omits ca and thal)",
+  "features": [
+    "age",
+    "sex",
+    "cp",
+    "trestbps",
+    "chol",
+    "fbs",
+    "restecg",
+    "thalch",
+    "exang",
+    "oldpeak",
+    "slope"
+  ],
+  "selection_rule": "One-standard-error rule on grouped-CV ROC-AUC; within that range prefer the 11-field set, then the simpler model; recall is a tie-breaker.",
+  "best_cv_roc_auc": 0.8156884494127689,
+  "one_se_auc_cutoff": 0.7890564976331472,
+  "eligible_within_one_se": [
+    "core11__logistic_regression",
+    "all13__logistic_regression",
+    "core11__xgboost",
+    "core11__random_forest",
+    "all13__random_forest",
+    "all13__xgboost"
+  ],
+  "decision_threshold": 0.5,
+  "positive_class_definition": "Original UCI num > 0",
+  "dataset_rows": 920,
+  "train_rows": 736,
+  "test_rows": 184,
+  "source_cohorts": [
+    "Cleveland",
+    "Hungary",
+    "Switzerland",
+    "VA Long Beach"
+  ],
+  "extra_feature_missing_percent": {
+    "ca": 66.4,
+    "thal": 52.8
+  },
+  "grouped_cv_metrics": {
+    "accuracy": 0.7592826819466515,
+    "precision": 0.8024670106446681,
+    "recall": 0.7905356844543339,
+    "f1": 0.787683177675458,
+    "roc_auc": 0.8156884494127689
+  },
+  "grouped_cv_std": {
+    "accuracy": 0.03783519320867723,
+    "precision": 0.10682811354324853,
+    "recall": 0.09798434062976298,
+    "f1": 0.05456757894657941,
+    "roc_auc": 0.05326390355924316
+  },
+  "held_out_test_metrics": {
+    "accuracy": 0.8260869565217391,
+    "precision": 0.8181818181818182,
+    "recall": 0.8823529411764706,
+    "specificity": 0.7560975609756098,
+    "f1": 0.8490566037735849,
+    "roc_auc": 0.9051889048302247,
+    "true_negatives": 62.0,
+    "false_positives": 20.0,
+    "false_negatives": 12.0,
+    "true_positives": 90.0
+  },
+  "library_versions": {
+    "python": "3.13.14",
+    "pandas": "2.2.3",
+    "scikit_learn": "1.6.1",
+    "xgboost": "3.4.1"
+  },
+  "privacy": "Inputs are processed in memory only; this app does not save submissions.",
+  "educational_only": true
+}

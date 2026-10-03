@@ -1,0 +1,3 @@
+# Training dependencies; XGBoost is used in the model comparison.
+-r requirements.txt
+xgboost==3.4.1
