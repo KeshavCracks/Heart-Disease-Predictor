@@ -12,3 +12,6 @@ models/*__*.joblib
 *.log
 NEXT_AI_PROMPT.md
 *.zip
+node_modules/
+web/node_modules/
+web/dist/

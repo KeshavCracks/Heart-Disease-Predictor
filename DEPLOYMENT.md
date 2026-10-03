@@ -29,3 +29,21 @@ The app includes the byte-identical published stylesheet at `assets/vercel-brand
 4. If you retrain or replace the artifact, update the model card and metrics, run the full tests, and verify the hosted artifact and dependency versions together before publishing.
 
 Cloud platform names, account requirements and deployment settings change; follow the host's current instructions. A future real-world health product would require a distinct, legally and clinically governed validation, privacy, security and monitoring program. This demo is not a starting authorization for clinical use.
+
+## Vercel (static React frontend, no backend)
+
+A self-contained React frontend lives in `web/`. It runs the same Logistic Regression
+entirely in the browser from an exported model (`web/src/model.json`), so it needs no
+server, no database, and never transmits visitor inputs. This is the recommended path
+for a public Vercel URL.
+
+1. Push this repository to GitHub.
+2. In Vercel, import the repo and set the **Root Directory** to `web` (Vite is
+   auto-detected; build `npm run build`, output `dist`).
+   Alternatively, run `npm run build` locally and drag the `web/dist` folder into
+   Vercel for an instant static deploy.
+3. No environment variables or secrets are required.
+
+The Streamlit app in this repo (`app.py`) remains available for local, in-person demos;
+it is not deployable to Vercel because Vercel is serverless and Streamlit needs a
+long-running process.
